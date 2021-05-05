@@ -1,0 +1,29 @@
+instructions for bookclub
+
+instructions for bookclub homepage which would be app component 
+//homepage component
+	//header 
+	//homepage-content
+	//footer 
+
+instructions for bookclub about-us
+//about-us
+	//header
+	//about-us-content
+	//footer
+
+instructions for bookclub discussion
+//discussion component
+	//header
+	//discussion content
+	//footer
+
+instructions for bookclub calendar
+//calendar component
+	//header 
+	//discussion content
+	//footer
+
+instructions for sign up component
+
+instructions for log in component 
