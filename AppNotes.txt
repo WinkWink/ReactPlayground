@@ -607,7 +607,7 @@ function App() {
     function increment() {
         setCount(prevCount => prevCount + 1)
     }
-    
+    ı
     function decrement() {
         setCount(prevCount => prevCount - 1)
     }
