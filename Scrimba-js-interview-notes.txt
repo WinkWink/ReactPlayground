@@ -1,0 +1,7 @@
+**What are falsy values in Javascript 
+there are truthy and falsy values in javascript 
+there are seven values in JS that can be interpreted as falsy 
+	- not necessary false but false like and can be interpreted as false in a condition 
+	- when you are asking the computer evaluate and expression as a yes or no answer 
+	- can use tru and false in if statement. 
+	- 
