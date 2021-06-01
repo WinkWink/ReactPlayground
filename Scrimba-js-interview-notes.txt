@@ -4,4 +4,197 @@ there are seven values in JS that can be interpreted as falsy
 	- not necessary false but false like and can be interpreted as false in a condition 
 	- when you are asking the computer evaluate and expression as a yes or no answer 
 	- can use tru and false in if statement. 
-	- 
+	- null, undefined, NaN, 0, false, '', "", are all falsey 
+	- set of values that evaluate to false 
+	- makes it easier 
+	- you want to try and avoid falsey values 
+	- try to be more descriptive 
+	- avoid edge cases - 
+	- there are lint settings that will not allow certain 
+
+
+***************************
+const let var 
+
+all variable types 
+
+const - ES6 - block scope - there to store constant values. Cannot reassign the value of the const. Not reassignable. Can mutate the value. so if you have: 
+
+const user = {
+	firstName: 'Dy'
+}
+
+user.firstName = "Dylan";
+
+this will mutate it. 
+
+let - ES6 - block scope, let, undeclared (difference from var is it is not hoisted because outside of the scope of function its not even a thing ) only exists in block of scope it is defined. Both can be used for reassignment values. Let was introduced to help fix the issues that come with variable hoisting. 
+
+var - lexical scope , variable hoisting, cannot be accessed out of function or where it is defined, hoisting it as undefined outside of function. Both can be used for reassignment values. 
+
+***************************
+
+== vs ===
+
+=== has to be exact and same variable type 
+== will match 1 == '1'
+
+typically always want to use ===
+
+***************************
+
+* Q: What do map(), filter() and reduce() do?
+
+array and object methods 
+
+map() - returns new array - modifys existing array - 
+
+const nums = [1, 2, 3, 4, 5];
+
+const numsAddOne = nums.map((value) => value + 1);
+
+console.log(numsAddOne)
+
+returns [2,3,4,5,6]
+
+filter() - returns new array - filters the array based on constriant 
+
+const evenNums = nums.filter((value) => value % 2 === 0 );
+
+returns [2,4]
+
+reduce() - lets us do a lot more powerful and complex things 
+reduce array to single number 
+
+const sum = nums.reduce((total, current) => {
+    return total + current;
+}, 0) 
+
+the zero says start at 0 
+
+const numsAddOneEvens = nums.reduce((acc, current) => {
+    current = current + 1; 
+    
+    if(current % 2 === 0) {
+        acc.push(current);
+    }
+    
+    return acc;
+}, []);
+
+***************************
+ * Q: What is the difference between undefined and null?
+
+why would you use one over the other 
+one might have to do with hoisting? while the other might be a null value in a db 
+
+undefined - something does not exist it does not have a value 
+
+null - intentional setting this does not have a value 
+
+const user = {
+    firstName: null
+};
+
+its still defined - it has an empty value for now 
+
+with null you are still defining it 
+its an empty place holder value 
+
+
+***************************
+ * Q: What are some JavaScript data types?
+ when it comes to data types you have primitives and non primitives 
+
+ primitives: booleans, strings, numbers , BigInt ( big numbers ), Symbol (unique values) 
+
+non primitives: arrays, objects, or [] and {}, Map , set (arrays, lists with unique values)
+
+***************************
+ * Q: What do the spread and rest operators do?
+
+ES6
+spread - unwrap an array or an object 
+const users = ['Dylan', 'Per', 'Dollan'];
+const allUsers = ['Olivia', ...users];
+
+console.log(allUsers);
+
+you can use the spread operator with objects too 
+
+const user = { firstName: 'Dylan', lastName: 'Israel' };
+const fullUser = { channel: 'codingtutorials360', ...user };
+console.log(fullUser);
+
+shows entire object. You can also use the spread operator with destructoring 
+
+const defaults = { channel: 'scrimba', ...user };
+console.log(defaults);
+
+const {channel, ...remainder } = defaults;
+
+you are pulling out a part of the object in this example 
+
+rest operator 
+very similar 
+they both use ...
+
+the rest operator in the argument of the function 
+
+function addNums(...nums){
+    return nums.reduce((total, current) => { return total + current; }, 0)
+}
+
+console.log(addNums(1,2,3))
+console.log(addNums(1,2))
+
+pass in as many arguments as you want with the rest operator, adds it in as an array
+
+
+***************************
+ * Q: What is and why might you destructure an object or array?
+
+destructuring arrays is a great way to provide context 
+
+make code more readable, provide more intent , code readability is something that is very important 
+
+following clean code principles 
+
+***************************
+* Q: What is Git? Why do you use it? What are some common commands you use?
+ * Bonus Resource: https://try.github.io/
+
+ part of being a good front end engineer is being on a team 
+ and when you are working on the same application youre gonna need to be familiar with version control 
+ git is the most common version control 
+
+ git is worlds most popular form of version control 
+ use it to keep track of various code changes 
+ integral when raising pull requests and working on a team 
+
+ //branch piece of code - separate from main repo 
+ //stage - add code depending which command you like 
+// commit and message  git commit -m "lalalal" 
+//pull code down and update branch 
+//push code up and change branch 
+
+***************************
+* Q: What is Agile? What is Scrum?
+both a process 
+* Bonus Resource: https://scrumguides.org/
+
+agile - development methodology, values human communication and feedback, interactive, done in sprints building and improving from previous builds - deliver some form of value - stand ups in morning - talk about blocks - updating team about what we did  - keep everyone aware - 
+
+scrum - scrum is a framework for development, and sustaining complex problems,
+
+***************************
+* Q: What are some CSS selectors and how do they differ?
+. and #
+class and id 
+
+***************************
+
+***************************
+
+***************************
+
