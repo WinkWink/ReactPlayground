@@ -23,9 +23,44 @@
     }
 }
 
-// lesson two 
-
-
 favPlaces.greeting();
+
+// lesson two 
+const obj = {};
+const anotherObj = obj;
+anotherObj.a = 1;
+
+if(obj === anotherObj){
+    console.log(true)
+}else{
+    console.log(false)
+}
+
+//usually if you did obj = {} and anotherObj = { } they each have their own reference (unique and they will not === true bc objects are unique )
+
+// object destructuring you do not have to use dot notation 
+
+
+
+
+const user = {
+  name: "Reed",
+  username: "Reedbarger",
+  email: "reed@gmail.com",
+  details: {
+    title: "Programmer"  
+  }  
+};
+
+// const { title } = user.details
+const { name, details: { title} } = user;
+
+function displayUserBio() {
+  console.log(`${name} is a ${title}`); 
+}
+
+displayUserBio()
+
+
 </script>
 </html>
