@@ -8,58 +8,178 @@
 
 </body>
 <script type="text/javascript">
-//lesson one 
-	var bar = "local 44";
-	var cafe = "green line cafe";
-	var restaurant = "distrito";
+// //lesson one 
+// 	var bar = "local 44";
+// 	var cafe = "green line cafe";
+// 	var restaurant = "distrito";
 
-	var favPlaces ={
-    	bar,
-    	cafe,
-    	restaurant,
-    	greeting: function(){
-        console.log("message to the console");
-        console.log("your fav restaurant is " + restaurant);
-    }
-}
+// 	var favPlaces ={
+//     	bar,
+//     	cafe,
+//     	restaurant,
+//     	greeting: function(){
+//         console.log("message to the console");
+//         console.log("your fav restaurant is " + restaurant);
+//     }
+// }
 
-favPlaces.greeting();
+// favPlaces.greeting();
 
-// lesson two 
-const obj = {};
-const anotherObj = obj;
-anotherObj.a = 1;
+// // lesson two 
+// const obj = {};
+// const anotherObj = obj;
+// anotherObj.a = 1;
 
-if(obj === anotherObj){
-    console.log(true)
-}else{
-    console.log(false)
-}
+// if(obj === anotherObj){
+//     console.log(true)
+// }else{
+//     console.log(false)
+// }
 
-//usually if you did obj = {} and anotherObj = { } they each have their own reference (unique and they will not === true bc objects are unique )
+// //usually if you did obj = {} and anotherObj = { } they each have their own reference (unique and they will not === true bc objects are unique )
 
-// object destructuring you do not have to use dot notation 
-
-
+// // object destructuring you do not have to use dot notation 
 
 
-const user = {
-  name: "Reed",
-  username: "Reedbarger",
-  email: "reed@gmail.com",
-  details: {
-    title: "Programmer"  
-  }  
-};
 
-// const { title } = user.details
-const { name, details: { title} } = user;
 
-function displayUserBio() {
-  console.log(`${name} is a ${title}`); 
-}
+// const user = {
+//   name: "Reed",
+//   username: "Reedbarger",
+//   email: "reed@gmail.com",
+//   details: {
+//     title: "Programmer"  
+//   }  
+// };
 
-displayUserBio()
+// // const { title } = user.details
+// const { name, details: { title} } = user;
+
+// function displayUserBio() {
+//   console.log(`${name} is a ${title}`); 
+// }
+
+// displayUserBio()
+
+// const recommendations = {
+//     pancakes: 'Nowhere Man',
+//     riceBowls: 'Pompoko',
+//     beer: 'The Craft Beer Co.',
+//     coffee: 'Coffee Roasters',
+//     small_plates: 'Venetian Plates',
+//     music: { 
+//         traditional: 'Fiddler\'s Elbow', 
+//         jazz: 'The Paris House'
+//     }
+// }
+
+// const { beer, coffe } = recommendations;
+
+// const { music: { traditional, jazz } } = recommendations;
+
+// console.log(jazz)
+
+// function displayMusicPlaces({ music: { traditional, jazz } }) {
+//     console.log(`Head to ${traditional} or ${jazz} to listen to great music!`)
+// }
+
+// displayMusicPlaces(recommendations);
+
+// // merging objects 
+
+// const user = {
+//   name: "",
+//   username: "",
+//   phoneNumber: "",
+//   email: "",
+//   password: ""  
+// };
+
+// const newUser = {
+//   username: "ReedBarger",
+//   email: "reed@gmail.com",
+//   password: "mypassword"  
+// };
+
+// console.log(Object.assign(user, newUser));
+
+// // we do not want to push these values into the original object we want to create an entirely new object 
+
+// // we do not want to mutate the original object 
+// // to fix this we pass the empty object  
+
+// const user = {
+//   name: "",
+//   username: "",
+//   phoneNumber: "",
+//   email: "",
+//   password: ""  
+// };
+
+// const newUser = {
+//   username: "ReedBarger",
+//   email: "reed@gmail.com",
+//   password: "mypassword"  
+// };
+
+// console.log(Object.assign({}, user, newUser));
+
+// // spread operator same power as object.assign with reduced syntax and more intuitive way, order matters for these 
+//  name: "",
+//   username: "",
+//   phoneNumber: "",
+//   email: "",
+//   password: ""  
+// };
+
+// const newUser = {
+//   username: "ReedBarger",
+//   email: "reed@gmail.com",
+//   password: "mypassword"  
+// };
+
+// const createdUser = { ...user, ...newUser, verified: false };
+// console.log(user);
+// console.log(Object.assign({}, user, newUser, { verified: false }));
+
+
+// maps 
+// objects come with limitations, keys have to be strings, 
+
+
+// const nums = {
+//   1: 1,
+//   true: true
+// };
+
+// console.log(new Map([
+//   [1, 1],
+//   [true, true]  
+// ]));
+
+// this keywords value is determined dynamically 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 </script>
