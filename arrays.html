@@ -5,10 +5,24 @@
 	<title>arrays</title>
 </head>
 <body>
-<script type="text/javascript">
-	<!-- arrays -->
-	// arrays were meant to be a data structure that can be easily manipulated how we can have flexible collections of data w. arrays 
-	
-</script>
+
+	<script type="text/javascript">
+		
+const songs = [
+    {song: "Shape of You", timesStreamed: 2.384, wonGrammy: true},
+    {song: "One Dance", timesStreamed: 1.791, wonGrammy: false},
+    {song: "Rockstar", timesStreamed: 1.781	, wonGrammy: false},
+    {song: "Closer", timesStreamed: 1.688, wonGrammy: false},
+    {song: "Thinking Out Loud", timesStreamed: 1.461, wonGrammy: true}
+]
+
+const hasWonGrammy = songs.some(song => song.wonGrammy);
+console.log(hasWonGrammy);
+
+const allMegaHits = songs.every(song => song.timesStreamed > 1.5);
+console.log(allMegaHits);
+
+
+	</script>
 </body>
 </html>

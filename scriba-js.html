@@ -161,6 +161,41 @@
 
 
 
+// Challenge: Write a countdown function with a hard-coded starting number inside closure
+// Stretch goal: Write a countdown function that can count from a provided number,
+// with a provided step
+
+// Start
+function countdown() {
+  // write your code here
+  let start = 10;
+  return function countingDown(){
+    start -= 1;
+    return start;
+  }
+}
+
+const countingDown = countdown();
+
+console.log(countingDown());
+console.log(countingDown());
+console.log(countingDown());
+
+// Start
+function countdown(x,y) {
+  // write your code here
+  let start = x;
+  return function countingDown(){
+    start -= y;
+    return start;
+  }
+}
+
+const countingDown = countdown(20,5);
+
+console.log(countingDown());
+console.log(countingDown());
+console.log(countingDown());
 
 
 
