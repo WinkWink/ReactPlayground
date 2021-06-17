@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Classes</title>
+</head>
+<body>
+<script type="text/javascript">
+// const student1 = {
+//   id: 1,
+//   name: "Reed",
+//   subjects: [],
+//   addSubject(subject) {
+//     this.subjects = [...this.subjects, subject];
+//   }
+// }
+
+// student1.addSubject('Math');
+// console.log(student1.subjects);
+
+
+// // constructor functions 
+// function Student(id, name, subjects = []) {
+//   this.id = id;
+//   this.name = name;
+//   this.subjects = subjects;  
+// }
+
+// console.log(new Student(1, 'Reed'));
+
+// // constructor function
+// function Student(id, name, subjects = []) {
+//   this.id = id;
+//   this.name = name;
+//   this.subjects = subjects;  
+// }
+
+// Student.prototype.addSubject = function(subject) {
+//   this.subjects = [...this.subjects, subject];   
+// }
+
+// const student1 = new Student(1, 'Reed');
+
+// student1.addSubject('Math');
+// console.log(student1.subjects);
+
+// // constructor practice 
+
+// function Book(id,title,author, themes = []) {
+// 	// your code here
+// 	this.id = id;
+// 	this.title = title;
+// 	this.author = author;
+// 	this.themes = themes;
+// }
+
+// Book.prototype.addTheme = function(theme) {
+//   this.themes = [...this.themes, theme];   
+// }
+
+// const book1 = new Book(1, 'book 1', 'author me');
+// const book2 = new Book(2, 'book 2', 'author also me');
+
+// book1.addTheme('fantasy');
+// console.log(book1.themes);
+
+// // class with constructor 
+
+// class Student {
+//   constructor(id, name, subjects = []) {
+//     this.id = id;
+//     this.name = name;
+//     this.subjects = subjects;      
+//   }   
+    
+//   addSubject() {}  
+// }
+
+// new Student(1, 'Reed');
+
+// // class practice 
+// class Film {
+// 	constructor(id, title, director, releaseYear, genres=[]){
+// 		this.id =id;
+// 		this.title = title;
+// 		this.director = director;
+// 		this.releaseYear = releaseYear;
+// 		this.genres = genres;
+// 	}
+	
+// 	addGenre(genre){
+// 		this.genres = [...this.genres, genre];
+// 	}
+// 	getFilmTitle(){
+// 		return `Film: ${this.title}`
+// 	}
+// }
+
+
+
+// const film1 = new Film(1,'ladybird','Greta Gerwig', 2018, 'comedy' );
+
+// console.log(film1.getFilmTitle());
+
+
+// // extends 
+// class Product {
+//   constructor(name, price, discountable) {
+//     this.name = name;
+//     this.price = price;
+//     this.discountable = discountable;  
+//   }  
+// }
+
+// class SaleProduct extends Product {
+//   constructor(name, price, discountable, percentOff) {
+//      super(name, price, discountable);
+//      this.percentOff = percentOff; 
+//   }  
+// }
+
+// const product1 = new SaleProduct("Coffee Maker", 99, true, 20);
+
+
+
+class Product {
+  constructor(name, price, discountable) {
+    this.name = name;
+    this.price = price;
+    this.discountable = discountable;  
+  }  
+  
+//   isDiscountable() {
+//     return this.discountable;  
+//   }
+}
+
+class SaleProduct extends Product {
+  constructor(name, price, discountable, percentOff) {
+     super(name, price, discountable);
+     this.percentOff = percentOff; 
+  }  
+  
+  getSalePrice() {
+     if (super.isDiscountable()) {
+       return this.price * ((100 - this.percentOff) / 100);
+     } else {
+        return `${this.name} is not eligible for a discount`;
+     }
+  }
+}
+
+const saleProduct1 = new SaleProduct("Coffee Maker", 99, false, 20);
+console.log(saleProduct1.getSalePrice());
+
+// getters 
+class Product {
+  constructor(name, price, discountable) {
+    this.name = name;
+    this.price = price;
+    this.discountable = discountable;
+  }
+
+  get clearancePrice() {
+    return this.price * 0.5;
+  }
+}
+
+const product1 = new Product("Coffee Maker", 99.95, false);
+// product1.price = {};
+console.log(product1.clearancePrice);
+
+//getters and setters 
+
+class Product {
+  constructor(name, price, discountable) {
+    this.name = name;
+    this._price = price;
+    this.discountable = discountable;
+  }
+
+  get price() {
+    return this._price;
+  }
+  
+  set price(price) {
+    if (typeof price !== "number") {
+      return this._price;
+    } else {
+      this._price = price; 
+    }
+  }
+}
+
+const product1 = new Product("Coffee Maker", 99.95, false);
+product1.price = 30;
+console.log(product1.price);
+
+
+</script>
+</body>
+</html>
